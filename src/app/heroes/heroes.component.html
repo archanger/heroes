@@ -1,17 +1,26 @@
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes" >
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{ hero.id }}</span> {{ hero.name }}
-    </a>
-    <button 
-      class="delete" 
-      title="delete hero"
-      (click)="delete(hero)">X</button>
-  </li>
-</ul>
-<div>
-  <label for="heroName">Hero Name:</label>
-  <input type="text" id="heroName" #heroName>
-  <button (click)="add(heroName.value); heroName.value=''">add</button>
+<div fxLayout="column" fxLayoutAlign="start center">
+  <h2>My Heroes</h2>
+  <mat-paginator 
+    [length]="totalItems"
+    [pageSize]="itemsPerPage"
+    (page)="pageChanged($event)"
+    hidePageSize
+    showFirstLastButtons></mat-paginator>
+</div>
+<div fxLayout fxLayoutAlign="center start">
+<mat-grid-list [cols]="cols | async" gutterSize="5px"
+    fxFlex.xs="400px"
+    fxFlex.sm="600px"
+    fxFlex.md="960px"
+    fxFlex.gt-md="1280px"
+    rowHeight="310px">
+  <mat-grid-tile *ngFor="let hero of heroes">
+    <mat-card fxLayout="column" fxLayoutGap="10px" matTooltip="{{ hero.description }}">
+      <img mat-card-image src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}">
+      <mat-card-header>
+        <mat-card-title>Name: {{ hero.name }}</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
 </div>
