@@ -1,9 +1,15 @@
+import { ts, publicKey } from './.keys';
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  marvel: {
+    domain: 'https://gateway.marvel.com:443',
+    ts: ts,
+    apikey: publicKey
+  }
 };
 
 /*
