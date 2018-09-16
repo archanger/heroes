@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -22,14 +23,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeroSearchComponent
   ],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    // HttpClientInMemoryWebApiModule.forRoot(
-    //   InMemoryDataService, { dataEncapsulation: false }
-    // )
   ],
   providers: [],
   bootstrap: [AppComponent]

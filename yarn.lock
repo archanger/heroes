@@ -162,6 +162,12 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/flex-layout@^6.0.0-beta.18":
+  version "6.0.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@angular/flex-layout/-/flex-layout-6.0.0-beta.18.tgz#fdf9d17a45989d0bf0dd1ad466eea503da618276"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/forms@^6.0.3":
   version "6.1.7"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-6.1.7.tgz#42484c2ab1079fd34ddd637eb143db6a17be4990"
@@ -2626,6 +2632,10 @@ globule@^1.0.0:
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
+
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
 
 handle-thing@^1.2.5:
   version "1.2.5"
